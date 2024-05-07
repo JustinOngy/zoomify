@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import {
   Dialog,
   DialogContent,
@@ -15,11 +15,13 @@ interface MeetingModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
-  className: string;
-  children: string;
-  handleClick: () => void;
+  className?: string;
+  children?: ReactNode;
+  handleClick?: () => void;
   buttonText?: string;
+  instantMeeting?: boolean;
   image?: string;
+  buttonClassName?: string;
   buttonIcon?: string;
 }
 
@@ -31,7 +33,9 @@ const MeetingModal = ({
   children,
   handleClick,
   buttonText,
+  instantMeeting,
   image,
+  buttonClassName,
   buttonIcon,
 }: MeetingModalProps) => {
   return (
