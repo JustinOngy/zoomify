@@ -7,6 +7,9 @@ import { Call, useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useUser } from "@clerk/nextjs";
 import Loader from "./Loader";
 import { useToast } from "@/components/ui/use-toast";
+import { Textarea } from "./ui/textarea";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const MeetingTypeList = () => {
   const router = useRouter();
@@ -22,6 +25,7 @@ const MeetingTypeList = () => {
   });
   const [callDetail, setCallDetail] = useState<Call>();
   const { toast } = useToast();
+  const [startDate, setStartDate] = useState(new Date());
 
   const createMeeting = async () => {
     if (!client || !user) return;
@@ -76,18 +80,18 @@ const MeetingTypeList = () => {
         handleClick={() => setMeetingState("isInstantMeeting")}
       />
       <HomeCard
-        img="/icons/join-meeting.svg"
-        title="Join Meeting"
-        description="via invitation link"
-        className="bg-blue-1"
-        handleClick={() => setMeetingState("isJoiningMeeting")}
-      />
-      <HomeCard
         img="/icons/schedule.svg"
         title="Schedule Meeting"
         description="Plan your meeting"
-        className="bg-purple-1"
+        className="bg-blue-1"
         handleClick={() => setMeetingState("isScheduleMeeting")}
+      />
+      <HomeCard
+        img="/icons/join-meeting.svg"
+        title="Join Meeting"
+        description="via invitation link"
+        className="bg-purple-1"
+        handleClick={() => setMeetingState("isJoiningMeeting")}
       />
       <HomeCard
         img="/icons/recordings.svg"
@@ -107,6 +111,27 @@ const MeetingTypeList = () => {
             <label className="text-base font-normal leading-[22.4px] text-sky-2">
               Add a description
             </label>
+            <Textarea
+              className="border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0"
+              onChange={(e) => {
+                setValues({ ...values, description: e.target.value });
+              }}
+            />
+            <label className="text-base font-normal leading-[22.4px] text-sky-2">
+              Select Date & Time
+            </label>
+          </div>{" "}
+          <div className="flex w-full flex-col gap-2.5">
+            <ReactDatePicker
+              className="bg-dark-3 w-full rounded p-2 focus-outline-none"
+              selected={values.dateTime}
+              onChange={(date) => setValues({ ...values, dateTime: date! })}
+              showTimeSelect
+              timeFormat="HH:mm"
+              timeIntervals={15}
+              timeCaption="Time"
+              dateFormat="MMMM d, yyyy h:mm aa"
+            />
           </div>
         </MeetingModal>
       ) : (
@@ -114,10 +139,13 @@ const MeetingTypeList = () => {
           isOpen={meetingState === "isScheduleMeeting"}
           onClose={() => setMeetingState(undefined)}
           title="Meeting Created"
-          handleClick={() => {}}
+          className="text-center"
+          handleClick={() => {
+            navigator.clipboard.writeText(meetingLink);
+            toast({ title: "Link coppied" });
+          }}
           image={"/icons/checked.svg"}
           buttonIcon="/icons/copy.svg"
-          className="text-center"
           buttonText="Copy Meeting Link"
         />
       )}
