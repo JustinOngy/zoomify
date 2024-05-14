@@ -11,6 +11,7 @@ import {
 } from "@stream-io/video-react-sdk";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Users, LayoutList } from "lucide-react";
+import { useToast } from "./ui/use-toast";
 
 import {
   DropdownMenu,
@@ -32,7 +33,7 @@ const MeetingRoom = () => {
   const [layout, setLayout] = useState<CallLayoutType>("speaker-left");
   const [showParticipants, setShowParticipants] = useState(false);
   const { useCallCallingState } = useCallStateHooks();
-
+  const { toast } = useToast();
   // for more detail about types of CallingState see: https://getstream.io/video/docs/react/ui-cookbook/ringing-call/#incoming-call-panel
   const callingState = useCallCallingState();
 
