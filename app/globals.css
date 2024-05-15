@@ -8,6 +8,24 @@
   box-sizing: border-box;
 }
 
+.bg-hero-img {
+  background-image: url("/images/hero-image.jpg");
+}
+
+.bg-meeting-card {
+  background-image: url("/images/bg-meeting.png");
+}
+
+.bg-meeting-card-2 {
+  background-image: url("/images/bg-meeting-2.svg");
+}
+.bg-meeting-card-3 {
+  background-image: url("/images/bg-meeting-3.svg");
+}
+.bg-meeting-card-4 {
+  background-image: url("/images/bg-meeting-4.svg");
+}
+
 /* ======== stream css overrides ======== */
 .str-video__call-stats {
   max-width: 500px;

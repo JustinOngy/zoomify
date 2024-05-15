@@ -6,10 +6,12 @@ import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { avatarImages } from "@/constants";
 import { useToast } from "./ui/use-toast";
+import { format } from "date-fns";
 
 interface MeetingCardProps {
   title: string;
   date: string;
+  dayOfWeek: string; // New prop for the day of the week
   icon: string;
   isPreviousMeeting?: boolean;
   buttonIcon1?: string;
@@ -22,6 +24,7 @@ const MeetingCard = ({
   icon,
   title,
   date,
+  dayOfWeek,
   isPreviousMeeting,
   buttonIcon1,
   handleClick,
@@ -37,7 +40,9 @@ const MeetingCard = ({
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
             <h1 className="text-2xl font-bold">{title}</h1>
-            <p className="text-base font-normal">{date}</p>
+            <p className="text-base font-normal">
+              {dayOfWeek} {date}
+            </p>
           </div>
         </div>
       </article>
