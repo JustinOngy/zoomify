@@ -1,12 +1,6 @@
 # 🚀 Zoomify - Video Call Application
 
 Zoomify is a web application designed for managing meetings and calls, powered by Next.js and integrated with the Clerk authentication service. Users can effortlessly schedule, join, and view meetings, as well as access recordings with ease.
-## 🛠️ Technologies Used
-
-- **Next.js**: For frontend development.
-- **Clerk**: Handles user authentication and session management.
-- **Stream**: Enables video call functionality, including meeting creation and joining.
-- **Tailwind CSS**: Utilized for stylish and responsive UI design.
 
 ## 📸 Screenshots
 
