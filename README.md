@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Zoomify - Video Call Application
 
-## Getting Started
+Zoomify is a web application designed for managing meetings and calls, powered by Next.js and integrated with the Clerk authentication service. Users can effortlessly schedule, join, and view meetings, as well as access recordings with ease.
 
-First, run the development server:
+## 🛠️ Technologies Used
+- **Next.js**: For frontend development.
+- **Clerk**: Handles user authentication and session management.
+- **Stream**: Enables video call functionality, including meeting creation and joining.
+- **Tailwind CSS**: Utilized for stylish and responsive UI design.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📁 Project Structure
+The project follows a structured approach, including:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🛠️ Setup and Configuration
+Initial setup of the Next.js project and installation of dependencies.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 📂 File and Folder Structure
+Organized file and folder structure for clarity and maintainability.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 🔐 Authentication Integration
+Seamless integration of Clerk for user authentication and session control.
 
-## Learn More
+### 📅 Meeting Functionality
+Implementation of meeting-related features like scheduling, joining, and viewing.
 
-To learn more about Next.js, take a look at the following resources:
+### 📹 Video Call Integration
+Incorporation of Stream for seamless video call experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🎨 Styling with Tailwind CSS
+Utilization of Tailwind CSS for sleek and responsive UI design.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 🚀 Deployment Process
+Deployment of the application for user accessibility.
 
-## Deploy on Vercel
+## 🔑 Key Steps and Methods
+1. **Setup and Configuration**: Initialization of the project and dependency setup.
+2. **File and Folder Structure**: Organizing files and folders for better code management.
+3. **Authentication with Clerk**: Integration of Clerk for user authentication.
+4. **Meeting Functionality**: Implementing features related to meeting management.
+5. **Video Call Integration**: Incorporating Stream for video call functionalities.
+6. **Styling with Tailwind CSS**: Utilizing Tailwind CSS for a visually appealing UI.
+7. **Deployment**: Deploying the application for public access.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Challenges Faced
+- **Integration with External Services**: Challenges in integrating Clerk and Stream for authentication and video call functionalities.
+- **Complex UI Components**: Designing reusable and dynamic UI components, such as meeting modals, required careful planning and implementation.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🎓 Lessons Learned
+- **Understanding External APIs**: Gained experience in working with external APIs like Clerk and Stream.
+- **Component Reusability**: Learned the importance of building reusable components for code efficiency and maintainability.
+
+## 🌟 Conclusion
+Zoomify provided valuable hands-on experience in building a modern web application with advanced functionalities using Next.js, Clerk, and Stream. Overcoming challenges and implementing various features helped in enhancing frontend development skills and integration with external services.
