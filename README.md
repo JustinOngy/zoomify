@@ -6,28 +6,27 @@ Zoomify is a web application designed for managing meetings and calls, powered b
 
 ### 1. Homepage
 
-![Homepage](/public/images/Screenshot1.png)
+![Homepage](/public/images/Screenshot1.jpg)
 
 - Description: This screenshot showcases the homepage of the Zoomify application, where users can schedule and join meetings.
 
 ### 2. Meeting Room
 
-![Meeting Room](/public/images/Screenshot2.png)
+![Meeting Room](/public/images/Screenshot2.jpg)
 
 - Description: The meeting room interface allows users to participate in video calls, share screens, and collaborate with other participants.
 
 ### 3. Upcoming Meetings
 
-![Upcoming Meetings](/public/images/Screenshot3.png)
+![Upcoming Meetings](/public/images/Screenshot3.jpg)
 
 - Description: Here, users can view a list of their upcoming meetings, providing details such as date, time, and participants.
 
 ### 4. Recordings
 
-![Recordings](/public/images/Screenshot4.png)
+![Recordings](/public/images/Screenshot4.jpg)
 
 - Description: The recordings section displays a collection of past meeting recordings, allowing users to playback and review past sessions.
-
 
 ## 📁 Project Structure
 
