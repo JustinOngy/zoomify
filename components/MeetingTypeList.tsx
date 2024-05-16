@@ -154,7 +154,13 @@ const MeetingTypeList = () => {
         title="Type the link here"
         className="text-center"
         buttonText="Join Meeting"
-        handleClick={() => router.push(values.link)}>
+        handleClick={() => {
+          const modifiedLink = values.link.replace(
+            "zoomify-dun.vercel.app",
+            ""
+          );
+          router.push(modifiedLink);
+        }}>
         <Input
           placeholder="Meeting link"
           onChange={(e) => setValues({ ...values, link: e.target.value })}
